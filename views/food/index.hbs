@@ -1,0 +1,58 @@
+  <div class="row container-fluid"> 
+              <h2 style="text-align: center;">Find your perfect meal</h2>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+                <div class="col" style="margin: 2%;">
+                    <div class="form-check" style="float: center;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Limit by Price Range
+                        </label>
+                        <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;">
+                            <option selected>Set your price range</option>
+                            <option value="1">$$$$</option>
+                            <option value="2">$$$</option>
+                            <option value="3">$$</option>
+                            <option value="4">$</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col" style="margin: 2%;">
+
+                    <div class="form-check" style="float: center;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        Limit by Cuisine
+                        </label>
+                        <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;">
+                            <option selected>Choose a Cuisine</option>
+                                  {{#each type}}
+                                  <option value="{{this.Category}}">{{this.Category}}</option>
+                                  {{/each}}
+                        </select>
+                    </div>
+                </div>
+          </div>
+<div class="row">
+    {{#each data}}
+     <div class="col-sm-6 col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{this.imgPath}}"
+                class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{this.Restaurant_Name}}</h5>
+                <p class="card-text">{{this.Dish_Description}}</p>
+                <div>
+                    <div class="price">${{this.Price}}</div>
+                     <div class="card-body">
+                          <a href="#" class="btn btn-primary">Add to Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>
