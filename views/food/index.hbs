@@ -12,10 +12,9 @@
                         </label>
                         <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;">
                             <option selected>Set your price range</option>
-                            <option value="1">$$$$</option>
-                            <option value="2">$$$</option>
-                            <option value="3">$$</option>
-                            <option value="4">$</option>
+                               {{#each price}}
+                                  <option value="{{this.Price_Profile}}">{{this.Price_Profile}}</option>
+                                {{/each}}
                         </select>
                     </div>
                 </div>
@@ -29,7 +28,7 @@
                         <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;">
                             <option selected>Choose a Cuisine</option>
                                   {{#each type}}
-                                  <option value="{{this.Category}}">{{this.Category}}</option>
+                                  <option value="{{this.Menu_Type}}">{{this.Menu_Type}}</option>
                                   {{/each}}
                         </select>
                     </div>
@@ -39,7 +38,7 @@
     {{#each data}}
      <div class="col-sm-6 col-md-4">
         <div class="card" style="width: 18rem;">
-            <img src="{{this.imgPath}}"
+            <img src="{{this.Img_Link}}"
                 class="card-img-top img-fluid" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{this.Restaurant_Name}}</h5>

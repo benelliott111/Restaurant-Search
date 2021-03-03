@@ -12,7 +12,14 @@ var orm = {
 
     selectType: function(callback) {
       // Run MySQL Query
-      db.query('SELECT DISTINCT Category FROM  dreamkitchen5', function (err, result) {
+      db.query('SELECT DISTINCT Menu_Type FROM  dreamkitchen5', function (err, result) {
+        if (err) throw err;
+        callback(result);
+      });
+    },
+    selectPrice: function(callback) {
+      // Run MySQL Query
+      db.query('SELECT DISTINCT Price_Profile FROM  dreamkitchen5', function (err, result) {
         if (err) throw err;
         callback(result);
       });

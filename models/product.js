@@ -17,6 +17,11 @@ var foods = {
         callback(res);
       });
     },
+    selectPrice: function(callback){
+      orm.selectPrice(function(res){
+        callback(res);
+      });
+    },
   
   };
  
