@@ -13,10 +13,26 @@ var foods = {
       });
     },
     selectType: function(callback){
-      orm. selectType(function(res){
+      orm.selectType(function(res){
         callback(res);
       });
     },
+    selectPrice: function(callback){
+      orm.selectPrice(function(res){
+        callback(res);
+      });
+    },
+    selectRsturantName: function(callback){
+      orm.selectRsturantName(function(res){
+        callback(res);
+      });
+    },
+    selectNewRecipe: function(callback){
+      orm.selectNewRecipe(function(res){
+        callback(res);
+      });
+    },
+  
   
   };
  
