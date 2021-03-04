@@ -1,10 +1,4 @@
 const db = require( './connection' )('dreamkitchen_db','danielsedin11')
-let search = document.getElementById('searchValue').value
-const restaurantLimit = document.getElementById('restaurantCheck').value
-const restaurantValue = document.getElementById('restaurantChoice').value
-
-const dishLimit = document.getElementById('dishCheck').value
-const dishValue = document.getElementById('dishChoice').value
 
 var orm = {
 
