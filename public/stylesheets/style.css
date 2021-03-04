@@ -1,8 +1,145 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 a {
   color: #00B7FF;
 }
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+body {
+    background-color: #eee
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 3px solid #000
+}
+
+.nav-tabs>li>a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 500
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    border-bottom: 3px solid #000
+}
+
+.navbar {
+    border-bottom: 1px solid #00000012;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+    background-color: #ffffff !important
+}
+
+.navbar-brand {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 500
+}
+
+.nav-tabs {
+    border-bottom: none
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 10px
+}
+
+.card-text {
+  padding-bottom:10px;
+    font-size:15px
+}
+.header-text{
+  font-size: 25px;
+  font-weight: bold;
+  text-align:center;
+  padding-top:20px;
+  color: #05882c;
+}
+.guarantee {
+    color: #05882c;
+    margin-left: 4px;
+    font-weight: 700;
+    padding-right:10px;
+}
+
+hr {
+    margin: 0.2rem 0;
+    color: #bfbebe
+}
+
+.buttons button {
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 2px
+}
+.font-weight-bold{
+  font-size: 18px;
+  font-weight: bold;
+  padding:10px 0px 8px 0px;
+}
+
+/*form */
+
+.get-in-touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+  
+  }
+  .get-in-touch .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3.2em;
+    line-height: 48px;
+    padding-bottom: 60px;
+       color: #5543ca;
+      background: #5543ca;
+      background: -webkit-linear-gradient(left,#28a733  0%,#5543ca 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+  }
+  
+  .contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+  }
+  .contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+  .contact-form .input-text:focus {
+    outline: none;
+  }
+
+  .contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+     background-image: linear-gradient(125deg,#28a733,#064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width:200px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,24 @@
+<section class="get-in-touch">
+   <h1 class="title">Post Your Recipe</h1>
+   <form class="contact-form row" action='/newRecipe' method="POST">
+      <div class="form-field col-lg-6">
+         <input id="Title" class="input-text js-input" type="text"  name="title" required>
+         <label class="label" for="Title">Recipe Title</label>
+      </div>
+      <div class="form-field col-lg-6 ">
+         <input id="RecipeLink" class="input-text js-input" type="text" name="RecipeLink" required>
+         <label class="label" for="RecipeLink">Add Recipe Link</label>
+      </div>
+      <div class="form-field col-lg-6 ">
+         <input id="Image" class="input-text js-input" type="text"  name ="Image" required>
+         <label class="label" for="Image">Add a Display Image for Your Link</label>
+      </div>
+      <div class="form-field col-lg-12">
+         <input id="Description" class="input-text js-input" type="text" name="Description" required>
+         <label class="label" for="Description">Description</label>
+      </div>
+      <div class="form-field col-lg-12">
+         <input class="submit-btn" type="submit" value="Submit">
+      </div>
+   </form>
+</section>
