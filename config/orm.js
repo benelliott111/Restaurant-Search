@@ -1,4 +1,4 @@
-const db = require( './connection' )('dreamKitchen','shivamysql1364')
+const db = require( './connection' )('DreamKitchen','209661Me')
 
 var orm = {
     // selectAll()
