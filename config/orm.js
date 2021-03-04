@@ -1,4 +1,10 @@
-const db = require( './connection' )('dreamKitchen','shivamysql1364')
+const db = require( './connection' )('dreamkitchen_db','danielsedin11')
+let search = document.getElementById('searchValue').value
+const restaurantLimit = document.getElementById('restaurantCheck').value
+const restaurantValue = document.getElementById('restaurantChoice').value
+
+const dishLimit = document.getElementById('dishCheck').value
+const dishValue = document.getElementById('dishChoice').value
 
 var orm = {
 
@@ -48,8 +54,10 @@ var orm = {
           callback(result);
         });
     }
-
+    
   };
+
+  
 
  /*function insertNewRecipe(Title, Recipe_Desc, Recipe_link, Image){
     const updateQuery = `INSERT INTO newrecipe (Title, Recipe_Desc, Recipe_link, Image) VALUES ('${Title}', '${Recipe_Desc}', '${Recipe_link}', '${Image}');`
