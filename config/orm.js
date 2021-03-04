@@ -44,7 +44,7 @@ async function getResults(event){
 }
 
 async function resultsData(foodSearch, priceLimit, dishType){
-    results.push( db.query(`SELECT food, description,  FROM database WHERE food = ${foodSearch}, price <=${priceLimit}, dish = ${dishType} `) )
+    results.push( db.query(`SELECT food, description,  FROM database WHERE food = %${foodSearch}%, price <=${priceLimit}, dish = ${dishType} `) )
 
 }
 
