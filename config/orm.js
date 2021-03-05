@@ -1,4 +1,4 @@
-const db = require( './connection' )('DreamKitchen','209661Me')
+const db = require( './connection' )('dreamkitchen_db','danielsedin11')
 
 var orm = {
 

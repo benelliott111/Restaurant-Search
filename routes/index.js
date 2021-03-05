@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const foods = require('../models/product');
 const orm2 = require( '../config/orm2' );
+const orm = require('../config/orm');
 /* GET home page. */
 router.get('/recipe', function(req, res, next) {
   res.render('recipe/Recipe');
@@ -28,6 +29,19 @@ router.get('/', function(req, res, next) {
   })
   
 });
+
+router.get('/search', (req, res, next) =>{
+   const search = req.body.searchValue
+    console.log(search)
+   const restaurantLimit = Boolean(req.body.restaurantCheck)
+   const restaurantValue = req.body.restaurantChoice
+
+   const dishLimit = Boolean(req.body.dishCheck)
+   const dishValue = req.body.dishChoice
+  orm2.searchResults(search, restaurantLimit, restaurantValue, dishLimit, dishValue)
+  res.send(search, restaurantLimit, restaurantValue, dishLimit, dishValue)
+
+})
 
 router.get('/newRecipe', function(req, res, next) {
   foods.selectNewRecipe((data)=>{

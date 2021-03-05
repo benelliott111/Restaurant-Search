@@ -16,44 +16,5 @@
     <script type="text/javascript" src="javascripts/homepage.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script>
-    const db = require( '../../config/connection.js' )('dreamkitchen_db','danielsedin11')
-
-
-    
-    async function searchPrepare(event){
-      event.preventDefault()
-    let search = document.getElementById('searchValue').value
-
-    const restaurantLimit = document.getElementById('restaurantCheck').checked
-    const restaurantValue = document.getElementById('restaurantChoice').value
-
-    const dishLimit = document.getElementById('dishCheck').checked
-    const dishValue = document.getElementById('dishChoice').value
-   
-    searchResults(search, restaurantLimit, restaurantValue, dishLimit, dishValue )
-}
-    async function searchResults(search, restaurantLimit, restaurantValue, dishLimit, dishValue){
-
-    if (dishLimit === false && restaurantLimit === true){
-      //const searchQuery = db.query(`SELECT * FROM dreamkitchen5 WHERE Restaurant_Name = ${restaurantValue} AND concat(Dish_Name, Dish_Description) LIKE '%${search}%`)
-        console.log(search, restaurantLimit, restaurantValue)
-
-    } else if (dishLimit === true && restaurantLimit === false){
-      //const searchQuery = db.query(`SELECT * FROM dreamkitchen5 WHERE Dish_Name = ${dishValue} AND concat(Dish_Name, Dish_Description) LIKE '%${search}%`)
-        console.log(search, dishLimit, dishValue)
-
-    } else if (dishLimit === true && restaurantLimit === true){
-      //const searchQuery = db.query(`SELECT * FROM dreamkitchen5 WHERE  Restaurant_Name = ${restaurantValue} AND Dish_Name =${dishValue} AND concat(Dish_Name, Dish_Description) LIKE '%${search}%`)
-        console.log(search, restaurantLimit, restaurantValue, dishLimit, dishValue)
-
-    } else {
-   // const searchQuery = db.query(`SELECT * FROM dreamkitchen5 WHERE concat(Dish_Name, Dish_Description) LIKE '%${search}%`)
-        console.log(search)
-
-    }
-  }
-
-    </script>
   </body>
 </html>
