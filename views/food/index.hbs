@@ -9,11 +9,11 @@
     </div>
     <div class="col" style="margin: 2%;">
         <div class="form-check" style="float: center;">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Limit by Price Range
+            <input class="form-check-input" type="checkbox" value="" id="restaurantCheck">
+            <label class="form-check-label" for="flexCheckDefault" >
+                Limit by Restaurant
             </label>
-            <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;">
+            <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;" id="restaurantChoice">
                 <option selected>Set your resturant name</option>
                 {{#each Name}}
                 <option value="{{this.Restaurant_Name}}">{{this.Restaurant_Name}}</option>
@@ -24,11 +24,11 @@
     <div class="col" style="margin: 2%;">
 
         <div class="form-check" style="float: center;">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="dishCheck">
+            <label class="form-check-label" for="flexCheckDefault" >
                 Limit by Cuisine
             </label>
-            <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;">
+            <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;" id="dishChoice">
                 <option selected>Choose a Cuisine</option>
                 {{#each type}}
                 <option value="{{this.Menu_Type}}">{{this.Menu_Type}}</option>

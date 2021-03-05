@@ -1,4 +1,4 @@
-const db = require( './connection' )('dreamKitchen','shivamysql1364')
+const db = require( './connection' )('DreamKitchen','209661Me')
 
 var orm = {
 
@@ -48,9 +48,8 @@ var orm = {
           callback(result);
         });
     }
-
+    
   };
-
   
   // Export the ORM object in module.exports.
   module.exports = orm
