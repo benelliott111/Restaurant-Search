@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const foods = require('../models/product');
 const orm2 = require( '../config/orm2' );
+const orm = require('../config/orm');
 /* GET home page. */
 router.get('/recipe', function(req, res, next) {
   res.render('recipe/Recipe');
@@ -28,6 +29,17 @@ router.get('/', function(req, res, next) {
   })
   
 });
+let results
+router.post('/search',async (req, res, next) =>{
+   const search = req.body.searchValue
+   console.log(search)
+
+  results = await orm2.searchResults(search)
+  res.render('food/index',{data:results});
+
+})
+
+
 
 router.get('/newRecipe', function(req, res, next) {
   foods.selectNewRecipe((data)=>{
