@@ -29,9 +29,9 @@ class Database {
 function dbConnect( dbName, dbPassword ){
     // at top INIT DB connection
     const db = new Database({
-        host: "localhost",
+        host: "pfw0ltdr46khxib3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         port: 3306,
-        user: "root",
+        user: "ywo11v7riyoo0hv4",
         /*! please fill in your password; then create the database name below and create the table */
         password: dbPassword,
         database: dbName
