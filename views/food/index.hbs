@@ -1,8 +1,8 @@
 <div class="row container-fluid">
     <h2 style="text-align: center;">Find your perfect meal</h2>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchValue">
-        <button class="btn btn-outline-success" type="submit"><a href="/search"></a>Search</button>
+    <form class="d-flex" action="/search" method="POST">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchValue" name="searchValue">
+        <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
     <div class="col" style="margin: 2%;">
         <div class="form-check" style="float: center;">

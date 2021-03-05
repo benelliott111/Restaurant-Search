@@ -29,19 +29,17 @@ router.get('/', function(req, res, next) {
   })
   
 });
-
-router.get('/search', (req, res, next) =>{
+let results
+router.post('/search',async (req, res, next) =>{
    const search = req.body.searchValue
-    console.log(search)
-   const restaurantLimit = Boolean(req.body.restaurantCheck)
-   const restaurantValue = req.body.restaurantChoice
+   console.log(search)
 
-   const dishLimit = Boolean(req.body.dishCheck)
-   const dishValue = req.body.dishChoice
-  orm2.searchResults(search, restaurantLimit, restaurantValue, dishLimit, dishValue)
-  res.send(search, restaurantLimit, restaurantValue, dishLimit, dishValue)
+  results = await orm2.searchResults(search)
+  res.render('food/index',{data:results});
 
 })
+
+
 
 router.get('/newRecipe', function(req, res, next) {
   foods.selectNewRecipe((data)=>{
