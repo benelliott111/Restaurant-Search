@@ -1,9 +1,12 @@
 <div class="row container-fluid">
-    <h2 style="text-align: center;">Find your perfect meal</h2>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <h2 class="title-home" style="text-align: center;">Find your perfect meal</h2>
+    <div class="row justify-content-center padding">
+    <div class="col-md-8 ftco-animate fadeInUp ftco-animated">
+        <form action="#" class="food-form">
+            <div class="form-group d-md-flex"> <input type="text" class="form-control px-4" placeholder="Find your meal..."> <input type="submit" class="search-food btn btn-primary px-5" value="Search Food"> </div>
+        </form>
+    </div>
+    </div>
     <div class="col" style="margin: 2%;">
         <div class="form-check" style="float: center;">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -51,13 +54,12 @@
                     <span class="guarantee"><i class="fas fa-money-bill-wave"></i> {{this.Price_Profile}}</span>
                     <span class="guarantee"><i class="fas fa-map-marked-alt fa-lg"></i> {{this.Neighbourhood}}</span>
                 </div>
-
             </div>
             <hr>
             <div class="card-body">
                 <div class="text-right buttons">
                     <button class="btn btn-outline-dark" onclick="location.href = '{{this.Menu_Link}}';" >Full menu</button>
-                     <button class="btn btn-dark" >button</a></button>
+                     <button class="btn btn-dark" onclick="location.href = '{{this.Make_it_at_Home}}';" >Make it</a></button>
                  </div>
             </div>
         </div>

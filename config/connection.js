@@ -26,15 +26,15 @@ class Database {
     }
 }
 
-function dbConnect( database, password ){
+function dbConnect( dbName, dbPassword ){
     // at top INIT DB connection
     const db = new Database({
         host: "127.0.0.1",
         port: 3306,
         user: "root",
         /*! please fill in your password; then create the database name below and create the table */
-        password: danielsedin11,
-        database: dreamkitchen_db
+        password: dbPassword,
+        database: dbName
     })
     return db
 }

@@ -1,49 +1,45 @@
 
+.header-title{
+  padding:40px;
+}
 a {
   color: #00B7FF;
 }
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
 
 body {
-    background-color: #eee
+  background-color: #eee
 }
-
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-    color: #495057;
-    background-color: transparent;
-    border-color: transparent;
-    border-bottom: 3px solid #000
+.navbar-light .navbar-brand {
+  color: rgb(255 255 255 / 90%);
 }
-
-.nav-tabs>li>a {
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 500
-}
-
-.nav-tabs .nav-link:hover {
-    border-color: transparent;
-    border-bottom: 3px solid #000
-}
-
-.navbar {
-    border-bottom: 1px solid #00000012;
-    padding-top: 0rem !important;
-    padding-bottom: 0rem !important;
-    background-color: #ffffff !important
-}
-
 .navbar-brand {
-    font-size: 24px;
-    text-transform: uppercase;
-    font-family: 'Allerta Stencil', sans-serif;
-    font-weight: 500
+  position: absolute;
+  left: 45%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
+  font-size:45px;
+  font-family: 'Dancing Script', cursive;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 6px;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0);
+  font-size:20px;
+  padding-right:15px;
+  font-weight: 500;
 }
 
-.nav-tabs {
-    border-bottom: none
+.bg-light {
+  background: linear-gradient(to right, #ffffff, #812534);
 }
+.navbar-collaps {
+  padding: 10px, 0px, 10px, 0px;
+}
+
 
 .card {
     border: none;
@@ -91,13 +87,13 @@ hr {
 
 /*form */
 
-.get-in-touch {
+.post-food {
     max-width: 800px;
     margin: 50px auto;
     position: relative;
   
   }
-  .get-in-touch .title {
+  .post-food .title {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -111,11 +107,11 @@ hr {
       -webkit-text-fill-color: transparent !important;
   }
   
-  .contact-form .form-field {
+  .post-form .form-field {
     position: relative;
     margin: 32px 0;
   }
-  .contact-form .input-text {
+  .post-form .input-text {
     display: block;
     width: 100%;
     height: 50px;
@@ -125,11 +121,11 @@ hr {
     line-height: 26px;
     font-weight: 400;
   }
-  .contact-form .input-text:focus {
+  .post-form .input-text:focus {
     outline: none;
   }
 
-  .contact-form .submit-btn {
+  .post-form .submit-btn {
     display: inline-block;
     background-color: #000;
      background-image: linear-gradient(125deg,#28a733,#064497);
@@ -142,4 +138,114 @@ hr {
     width:200px;
     cursor: pointer;
   }
+  .label2{
+    padding-bottom:20px;
+    color:#1b00c7;
+  }
+
+  /* flip card */
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
   
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #e1cbcf;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .Dish_Name{
+    padding-top:25px;
+    font-size:22px;
+    font-weight:bold;
+    font-family: 'cursive';
+  }
+  .Dish_Description{
+    padding:18px 8px 4px 8px;
+    font-family: 'Dancing Script', cursive;
+    font-size:20px;
+  }
+
+  /*search*/
+
+.padding {
+    padding-top: 1.5rem;
+    padding-bottom: 1.3rem;
+}
+
+body {
+    background-color: #f8fafe
+}
+
+.food-form .form-group {
+    border: 1px solid #9ff0c8;
+    padding: 10px
+}
+
+.food-form .form-group input {
+    height: 40px !important;
+    border: transparent
+}
+
+.form-control {
+    height: 80px !important;
+    background: #fff !important;
+    color: #3a4348 !important;
+    font-size: 18px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important
+}
+
+.px-4 {
+    padding-left: 1.5rem !important
+}
+
+.food-form .form-group .search-food {
+    background: #22d47b;
+    border: 2px solid #22d47b;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0
+}
+.form-select{
+  border:1px solid #22d47b;
+  
+}
+
+.title-home{
+  padding-top:65px;
+}

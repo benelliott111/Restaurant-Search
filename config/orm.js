@@ -12,7 +12,7 @@ var orm = {
     // selectAll()
     selectAll: function(callback) {
       // Run MySQL Query
-      db.query('SELECT * FROM dreamkitchen5', function (err, result) {
+      db.query('SELECT * FROM dreamKitchen5', function (err, result) {
         if (err) throw err;
         callback(result);
       });
@@ -20,28 +20,28 @@ var orm = {
 
     selectType: function(callback) {
       // Run MySQL Query
-      db.query('SELECT DISTINCT Menu_Type FROM  dreamkitchen5', function (err, result) {
+      db.query('SELECT DISTINCT Menu_Type FROM  dreamKitchen5', function (err, result) {
         if (err) throw err;
         callback(result);
       });
     },
     selectRsturantName: function(callback) {
       // Run MySQL Query
-      db.query('SELECT DISTINCT Restaurant_Name FROM  dreamkitchen5', function (err, result) {
+      db.query('SELECT DISTINCT Restaurant_Name FROM  dreamKitchen5', function (err, result) {
         if (err) throw err;
         callback(result);
       });
     },
     selectPrice: function(callback) {
       // Run MySQL Query
-      db.query('SELECT DISTINCT Price_Profile FROM  dreamkitchen5', function (err, result) {
+      db.query('SELECT DISTINCT Price_Profile FROM  dreamKitchen5', function (err, result) {
         if (err) throw err;
         callback(result);
       });
     },
 
     selectItemByType: function(type, callback){
-      const updateQuery = `SELECT * FROM dreamkitchen5 where type = ${type}`
+      const updateQuery = `SELECT * FROM dreamKitchen5 where type = ${type}`
       // Run MySQL Query
       db.query(updateQuery , function (err, result) {
           if (err) throw err;
@@ -51,14 +51,6 @@ var orm = {
 
   };
 
- /*function insertNewRecipe(Title, Recipe_Desc, Recipe_link, Image){
-    const updateQuery = `INSERT INTO newrecipe (Title, Recipe_Desc, Recipe_link, Image) VALUES ('${Title}', '${Recipe_Desc}', '${Recipe_link}', '${Image}');`
-    console.log("updateQuery" + updateQuery)
-    // Run MySQL Query
-   return result= db.query(updateQuery);
-  }*/
-
-  
   
   // Export the ORM object in module.exports.
   module.exports = orm
