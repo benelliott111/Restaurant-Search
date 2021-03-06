@@ -2,11 +2,48 @@
     <h2 class="title-home" style="text-align: center;">Find your perfect meal</h2>
     <div class="row justify-content-center padding">
     <div class="col-md-8 ftco-animate fadeInUp ftco-animated">
-       <form class="d-flex" action="/search" method="POST">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchValue" name="searchValue">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+        <form class="food-form" action="/search" method="POST">
+            <div class="form-group d-md-flex">
+             <input type="text"  id="searchValue" name="searchValue" class="form-control px-4" placeholder="Find your meal...">
+             <input type="submit" class="search-food btn btn-primary px-5" value="Search Food"> </div>
+        </form>
     </div>
+    </div>
+    <div class="col" style="margin: 2%;">
+        <div class="form-check" style="float: center;">
+            <label class="form-check-label" for="flexCheckDefault" >
+                Limit by Restaurant
+            </label>
+             <form  class="food-form" action="/" method="POST">
+              <div class="input-group">
+                <select class="form-select" id="inputGroupSelect04" name="searchValue" aria-label="Example select with button addon">
+                 <option selected>Choose...</option>
+                {{#each Name}}
+                    <option value="{{this.Restaurant_Name}}">{{this.Restaurant_Name}}</option>
+                {{/each}}
+                </select>
+                <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search" style="color:#009e4f"></i></button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="col" style="margin: 2%;">
+        <div class="form-check" style="float: center;">
+            <label class="form-check-label" for="flexCheckDefault" >
+                Limit by Cuisine
+            </label>
+             <form  class="food-form" action="/searchCuisine" method="POST">
+              <div class="input-group">
+                <select class="form-select" id="inputGroupSelect04"  name="searchValue" aria-label="Example select with button addon">
+                 <option selected>Choose...</option>
+                {{#each type}}
+                <option value="{{this.Menu_Type}}">{{this.Menu_Type}}</option>
+                {{/each}}
+                </select>
+                <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search" style="color:#009e4f"></i></button>
+            </div>
+         </form>
+        </div>
     </div>
     </div>
 <div class="row g-3">
