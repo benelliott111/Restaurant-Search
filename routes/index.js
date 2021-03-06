@@ -2,32 +2,53 @@ var express = require('express');
 var router = express.Router();
 const foods = require('../models/product');
 const orm2 = require( '../config/orm2' );
-/* GET home page. */
+const orm = require('../config/orm');
+
+var Type
+var Price
+var Name
+
 router.get('/recipe', function(req, res, next) {
   res.render('recipe/Recipe');
 });
 
 router.get('/', function(req, res, next) {
-  var Type
-  var Price
-  var Name
+
   foods.selectType((type)=>{
     Type = type
-    console.log(type)
   })
   foods.selectPrice((price)=>{
     Price = price
-    console.log(price)
   })
   foods.selectRsturantName((name)=>{
     Name = name
-    console.log(Name)
   })
   foods.selectAll((data)=>{
     res.render('food/index', { data: data , type:Type , price:Price, Name:Name});
   })
   
 });
+router.post('/search',async (req, res, next) =>{
+   const search = req.body.searchValue
+  results = await orm2.searchResults(search)
+  res.render('food/index',{data:results,type:Type, Name:Name});
+
+})
+
+router.post('/',async (req, res, next) =>{
+  const search = req.body.searchValue
+ results = await orm2.searchResuturant(search)
+ res.render('food/index',{data:results, type:Type , Name:Name});
+
+})
+
+router.post('/searchCuisine',async (req, res, next) =>{
+const search = req.body.searchValue
+ results = await orm2.searchCuisine(search)
+ res.render('food/index',{data:results,type:Type, Name:Name});
+
+})
+
 
 router.get('/newRecipe', function(req, res, next) {
   foods.selectNewRecipe((data)=>{

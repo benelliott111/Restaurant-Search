@@ -2,47 +2,56 @@
     <h2 class="title-home" style="text-align: center;">Find your perfect meal</h2>
     <div class="row justify-content-center padding">
     <div class="col-md-8 ftco-animate fadeInUp ftco-animated">
-        <form action="#" class="food-form">
-            <div class="form-group d-md-flex"> <input type="text" class="form-control px-4" placeholder="Find your meal..."> <input type="submit" class="search-food btn btn-primary px-5" value="Search Food"> </div>
+        <form class="food-form" action="/search" method="POST">
+            <div class="form-group d-md-flex">
+             <input type="text"  id="searchValue" name="searchValue" class="form-control px-4" placeholder="Find your meal...">
+             <input type="submit" class="search-food btn btn-primary px-5" value="Search Food"> </div>
         </form>
     </div>
     </div>
     <div class="col" style="margin: 2%;">
         <div class="form-check" style="float: center;">
-            <input class="form-check-input" type="checkbox" value="" id="restaurantCheck">
             <label class="form-check-label" for="flexCheckDefault" >
                 Limit by Restaurant
             </label>
-            <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;" id="restaurantChoice">
-                <option selected>Set your resturant name</option>
+             <form  class="food-form" action="/" method="POST">
+              <div class="input-group">
+                <select class="form-select" id="inputGroupSelect04" name="searchValue" aria-label="Example select with button addon">
+                 <option selected>Choose...</option>
                 {{#each Name}}
-                <option value="{{this.Restaurant_Name}}">{{this.Restaurant_Name}}</option>
+                    <option value="{{this.Restaurant_Name}}">{{this.Restaurant_Name}}</option>
                 {{/each}}
-            </select>
+                </select>
+                <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search" style="color:#009e4f"></i></button>
+            </div>
+            </form>
         </div>
     </div>
     <div class="col" style="margin: 2%;">
-
         <div class="form-check" style="float: center;">
-            <input class="form-check-input" type="checkbox" value="" id="dishCheck">
             <label class="form-check-label" for="flexCheckDefault" >
                 Limit by Cuisine
             </label>
-            <select class="form-select" aria-label="Default select example" style="max-width: 500px; float:initial;" id="dishChoice">
-                <option selected>Choose a Cuisine</option>
+             <form  class="food-form" action="/searchCuisine" method="POST">
+              <div class="input-group">
+                <select class="form-select" id="inputGroupSelect04"  name="searchValue" aria-label="Example select with button addon">
+                 <option selected>Choose...</option>
                 {{#each type}}
                 <option value="{{this.Menu_Type}}">{{this.Menu_Type}}</option>
                 {{/each}}
-            </select>
+                </select>
+                <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search" style="color:#009e4f"></i></button>
+            </div>
+         </form>
         </div>
     </div>
     </div>
 <div class="row g-3">
     {{#each data}}
-    <div class="col-sm-6 col-md-4">
+    <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="card ">
             <p class="header-text">{{this.Restaurant_Name}}</p>
-            <img src="{{this.Img_Link}}" class="card-img-top img-fluid" alt="...">
+            <img src="{{this.Img_Link}}" onclick="location.href = '{{this.URL4Rest}}'" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
                      <span
