@@ -4,10 +4,11 @@ const foods = require('../models/product');
 const orm2 = require( '../config/orm2' );
 const orm = require('../config/orm');
 
+
 var Type
 var Price
 var Name
-
+/* GET home page. */
 router.get('/recipe', function(req, res, next) {
   res.render('recipe/Recipe');
 });
@@ -28,6 +29,7 @@ router.get('/', function(req, res, next) {
   })
   
 });
+
 router.post('/search',async (req, res, next) =>{
    const search = req.body.searchValue
   results = await orm2.searchResults(search)
@@ -48,7 +50,6 @@ const search = req.body.searchValue
  res.render('food/index',{data:results,type:Type, Name:Name});
 
 })
-
 
 router.get('/newRecipe', function(req, res, next) {
   foods.selectNewRecipe((data)=>{

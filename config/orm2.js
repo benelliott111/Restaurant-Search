@@ -21,3 +21,4 @@ async function searchCuisine(search){
 }
 
   module.exports = {insertNewRecipe, searchResults, searchResuturant, searchCuisine}
+
