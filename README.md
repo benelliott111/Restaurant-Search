@@ -10,8 +10,6 @@ Submitted: March 8, 2021
             Hilary, Testing
             Michael O'Connor, WebDev Wannabe, Database Management, Heroku Deployment and Documentation
 
-   * [Assignment15](#assignment15)
-   * [Unit 15: Project Two](#unit-15-project-two)
    * [01 Goal:](#01-goal)
    * [02 Approach:](#02-approach)
    * [03 Presentation Requirements](#03-presentation-requirements)
@@ -52,24 +50,24 @@ Submitted: March 8, 2021
                 /app/routes (for the routing logic, or ‘controller’ component) server.js
             [X] deployed using Heroku (with mysql database)
 
-    We allocated the work to those who best could deliver on elements of the project and discussed a roadmap for the project over the ensuing week for substailal completion on  Friday March 5 to allow for final adjustments and user acceptance over the weekend. Team members stepped up for development of aspects that they believed they could deliver.  We used the KANBAN model for managing the project and met on daily during the class time to advance the project. SEE THE KANBAN https://github.com/benelliott111?tab=projects to follow the flow of the work effort. At all times we had the scope limitations and timelines in mind to ensire success.  On the Friday before delivery, we had the final working prototype up and running and had completed most of the testing to ensure functionality.  Still, additional user acceptance testing would be done over the weekend.  We were able to maintain a flow of github pulls and merges by manageing changes in each team members separate branches and periodically reconiling changes on merging.
+    We allocated the work to those who best could deliver on elements of the project and discussed a roadmap for the project over the ensuing week for substailal completion on  Friday March 5 to allow for final adjustments and user acceptance over the weekend. Team members stepped up for development of aspects that they believed they could deliver.  We used the KANBAN model for managing the project and met on daily during the class time to advance the project. SEE THE KANBAN https://github.com/benelliott111?tab=projects to follow the flow of the work effort. At all times we had the scope limitations and timelines in mind to ensire success.  On the Friday before delivery, we had the final working prototype up and running and had completed most of the testing to ensure functionality.  Still, additional user acceptance testing would be done over the weekend.  We were able to maintain a flow of github pulls and merges by managing changes in each team members separate branches and periodically reconiling changes on merging.
 
 
 # 03 Presentation Requirements
 
 The presentation on Monday February 8, 2021 addresses the following: 
 
-            [x] Elevator pitch: a one minute description of our application
+            [x] Elevator pitch:  Our app builds a bridge between recipes and restaurants.
 
-            [x] Concept: What is your user story? What was your motivation for development?
+            [x] Concept: We wanted to create a database of restaurant menu items and provide curated links to recipes one could make at home and vice versa.
 
-            [x] Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+            [x] Process: We created a database in MySQL and deployed it through Heroku.com.
 
-            [x] Demo: Show your stuff!
+            [x] Demo: We will demo it live.
 
-            [x] Directions for Future Development
+            [x] Directions for Future Development are described below.
 
-            [x] Links to the deployed application and the GitHub repository
+            [x] Links to the deployed application and the GitHub repository, see above.
 
 # 04 Testing and Quality Control:
 
@@ -83,7 +81,7 @@ The presentation on Monday February 8, 2021 addresses the following:
 
 # 05 Lessons Learned:
 
-The following topices were applied during the project:
+The following topics were applied during the project:
 
     * Full-stack applications
 
