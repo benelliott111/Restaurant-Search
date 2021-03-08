@@ -5,7 +5,7 @@ This is the repo for Legendary Twisters - Project Two due March 5, 2021.
 # Unit 15: Project Two
 
 Submitted: March 8, 2021
-            Shiva Sabokdast, Lead Developer
+            Shiva Sabokdast, Lead Developer and back end
             Ben Elliott, HTML Integrator and Search Wizard
             Hilary, Testing
             Michael O'Connor, WebDev Wannabe, Database Management, Heroku Deployment and Documentation
@@ -61,7 +61,7 @@ The presentation on Monday February 8, 2021 addresses the following:
 
             [x] Concept: We wanted to create a database of restaurant menu items and provide curated links to recipes one could make at home and vice versa.
 
-            [x] Process: We created a database in MySQL and deployed it through Heroku.com.
+            [x] Process: We created a database in MySQL and deployed it through Heroku.com, using Handlebars, Node, Express and Sequelize to support it all.
 
             [x] Demo: We will demo it live.
 
@@ -100,12 +100,14 @@ The following topics were applied during the project:
 
     3. Ability to send links to specific recipes or menus.
 
-    5. Searching based on full dish description.
+    4. Searching based on full dish description.
+
+    5. Appropriate Login page to allow for only authorized user entries.
 
 
 # 07 Current Renderings:
 
-![alt text](public/images/Login.png)
+![alt text](public/images/Login.png) Not Implemented
 ![alt text](public/images/LandingPage.png)
 ![alt text](public/images/RestaurantFilter.png)
 ![alt text](public/images/CuisineFilter.png)
@@ -114,7 +116,7 @@ The following topics were applied during the project:
 
 # 08 Installation Instructions 
 
-Be sure to do an npm install and install 
+Be sure to do an npm install and install mySQL, Handlebars, Node, Express and Sequelize.
 
 # 09 Usage Info 
 
