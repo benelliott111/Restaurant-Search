@@ -120,7 +120,7 @@ Be sure to do an npm install and install mySQL, Handlebars, Node, Express and Se
 
 # 09 Usage Info 
 
-Feel free to try the app.
+Feel free to try the app here https://dreamkitchentoronto.herokuapp.com/.
 
 # 10 Contribution Guidelines 
 
