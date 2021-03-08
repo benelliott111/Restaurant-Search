@@ -37,10 +37,10 @@ Submitted: March 8, 2021
             [X] Use Node+Express
             [X] MySQL database, with the actual SQL statements in a separate module with method calls (ORM)
             [X] RESTful API calls: GET, POST, DELETE, PUT that send JSON data
-            [] Must utilize at least ONE new library, package, or technology that we haven’t discussed
+            [X] Must utilize at least ONE new library, package, or technology that we haven’t discussed
             [X] Must have a polished frontend / UI (bootstrap 5 + mobile first)
             [X] Must meet good quality coding standards (indentation, scoping, naming), using LINTING
-            [] Must not expose sensitive API key information on the server (use npm package dotenv)
+            [X] Must not expose sensitive API key information on the server (use npm package dotenv)
             [X] Structured at least loosely MVC:
                 /project2
                 /public (all the html, the ‘view’ component)
